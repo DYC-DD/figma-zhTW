@@ -1,16 +1,20 @@
 <div align="center">
 
-![](./assets/icons/icon128.png)
+[![](./assets/icons/icon128.png)](https://chromewebstore.google.com/detail/adpodcfkpinhfkclhgpnpcnefeafkolh?utm_source=item-share-cb)
 
-# Figma zh-TW
+# [Figma zh-TW](https://chromewebstore.google.com/detail/adpodcfkpinhfkclhgpnpcnefeafkolh?utm_source=item-share-cb)
 
-[![Attribution](https://img.shields.io/badge/Based%20on-figmaCN-555?style=flat)](./docs/ATTRIBUTION.md)
+![GitHub release](https://img.shields.io/github/v/release/DYC-DD/figma-zhTW) ![License](https://img.shields.io/github/license/DYC-DD/figma-zhTW) ![Last commit](https://img.shields.io/github/last-commit/DYC-DD/figma-zhTW) [![Download](https://img.shields.io/badge/Download-Chrome%20Web%20Store-4285F4?style=flat)](https://chromewebstore.google.com/detail/adpodcfkpinhfkclhgpnpcnefeafkolh?utm_source=item-share-cb) [![Attribution](https://img.shields.io/badge/Based%20on-figmaCN-555?style=flat)](./docs/ATTRIBUTION.md)
 
 </div>
 
 This is a Chrome browser extension that provides Traditional Chinese (zh-TW) localization for parts of the [Figma](https://www.figma.com/) web interface.
 
 ## Installation
+
+- **Official installation (recommended):**
+
+  - Install directly from the Chrome Web Store: [📥 Install figma zh-TW](https://chromewebstore.google.com/detail/adpodcfkpinhfkclhgpnpcnefeafkolh?utm_source=item-share-cb)
 
 - **Developer installation:**
 
