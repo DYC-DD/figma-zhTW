@@ -14,6 +14,7 @@
 
     return {
       captureCount,
+      literalLength: literalParts.join("").length,
       regex: new RegExp(`^${expression}$`),
       template: translatedTemplate,
     };
@@ -46,6 +47,9 @@
         sourceTextByTranslation.set(translatedText, sourceText);
       }
     });
+
+    // Match a more specific phrase before a shorter pattern embedded in it.
+    patternEntries.sort((a, b) => b.literalLength - a.literalLength);
 
     function translateCapturedValue(capturedValue) {
       if (translationsBySourceText.has(capturedValue)) {

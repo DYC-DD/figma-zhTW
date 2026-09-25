@@ -9,8 +9,8 @@ const {
 test("loads the synchronized exact and pattern entries", () => {
   const engine = createTranslationEngine(translations);
 
-  assert.equal(engine.exactEntryCount, 4328);
-  assert.equal(engine.patternEntryCount, 54);
+  assert.equal(engine.exactEntryCount, 4240);
+  assert.equal(engine.patternEntryCount, 102);
 });
 
 test("prefers an exact translation over a matching pattern", () => {
@@ -89,6 +89,29 @@ test("keeps the first duplicate exact or pattern entry", () => {
 
   assert.equal(engine.translateText("Open"), "開啟");
   assert.equal(engine.translateText("3 days"), "3 天");
+});
+
+test("matches the most specific dynamic phrase first", () => {
+  const engine = createTranslationEngine([
+    ["{@} minute ago", "{1} 分鐘前"],
+    ["Edited {@} minute ago", "{1} 分鐘前編輯"],
+    ["Move {@} files", "移動 {1} 個檔案"],
+    ["Move file {@} files", "移動 {1} 個檔案"],
+  ]);
+
+  assert.equal(engine.translateText("Edited 1 minute ago"), "1 分鐘前編輯");
+  assert.equal(engine.translateText("Move file 7 files"), "移動 7 個檔案");
+});
+
+test("translates new upstream UI terms and numbered phrases", () => {
+  const engine = createTranslationEngine(translations);
+
+  assert.equal(engine.translateText("Verify"), "驗證");
+  assert.equal(engine.translateText("Shared folders"), "共用資料夾");
+  assert.equal(engine.translateText("Create new slide"), "建立新投影片");
+  assert.equal(engine.translateText("12 columns  (auto)"), "12 欄（自動）");
+  assert.equal(engine.translateText("23 minutes ago"), "23 分鐘前");
+  assert.equal(engine.translateText("Can edit 12 files"), "可編輯 12 個檔案");
 });
 
 test("matches synchronized multi-value translations", () => {

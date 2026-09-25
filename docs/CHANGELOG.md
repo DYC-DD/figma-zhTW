@@ -2,6 +2,17 @@
 
 This changelog follows the [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/) format to track version updates.
 
+## [Unreleased]
+
+### Added
+
+- 新增 127 個翻譯鍵，補上投影片、資料夾、兩步驗證、匯出及相對時間等繁體中文翻譯。
+
+### Changed
+
+- 以動態模式取代 167 筆重複的固定數字詞條，保留一筆尚無對應模式的舊詞條。
+- 動態模式優先匹配較具體的字串，避免較短的模式造成部分誤譯。
+
 ## [1.1.0] - 2026-08-28
 
 ### Added
