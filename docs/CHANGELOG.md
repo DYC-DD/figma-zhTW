@@ -10,6 +10,7 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/zh-TW/1
 
 ### Changed
 
+- 更新擴充功能圖示（16、48、128 px），並新增 32 px 圖示及對應的 manifest 設定。
 - 以動態模式取代 167 筆重複的固定數字詞條，保留一筆尚無對應模式的舊詞條。
 - 動態模式優先匹配較具體的字串，避免較短的模式造成部分誤譯。
 
