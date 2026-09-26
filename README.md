@@ -1,6 +1,6 @@
 <div align="center">
 
-[![](./assets/icons/icon128.png)](https://chromewebstore.google.com/detail/adpodcfkpinhfkclhgpnpcnefeafkolh?utm_source=item-share-cb)
+[![](./assets/icon.png)](https://chromewebstore.google.com/detail/adpodcfkpinhfkclhgpnpcnefeafkolh?utm_source=item-share-cb)
 
 # [Figma zh-TW](https://chromewebstore.google.com/detail/adpodcfkpinhfkclhgpnpcnefeafkolh?utm_source=item-share-cb)
 
