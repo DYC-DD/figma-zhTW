@@ -2,6 +2,21 @@
 
 This changelog follows the [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/) format to track version updates.
 
+## [1.1.2] - 2026-10-21
+
+### Added
+
+- 新增 23 個上游詞條，涵蓋 Figma Skills、AI 聊天、字型上傳、檔案附件與存取權限。
+
+### Changed
+
+- 以台灣慣用語校正新增詞條，包括「本機字型」、「共用聊天」、「授權條款」與「隱藏式字幕」。
+- 統一連接線、說明文件與未儲存文件提示的繁體中文用語，並改善數據傳輸費用等文字表達。
+
+### Fixed
+
+- 將 `Connectors`、`Bent connector`、`Curved connector` 等詞條中的錯誤「連線線」用語修正為「連接器」或「連接線」，並統一相關 AI Agent 用語。
+
 ## [1.1.1] - 2026-09-26
 
 ### Added
