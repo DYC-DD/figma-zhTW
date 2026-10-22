@@ -9,7 +9,7 @@ const {
 test("loads the synchronized exact and pattern entries", () => {
   const engine = createTranslationEngine(translations);
 
-  assert.equal(engine.exactEntryCount, 4240);
+  assert.equal(engine.exactEntryCount, 4263);
   assert.equal(engine.patternEntryCount, 102);
 });
 
@@ -112,6 +112,10 @@ test("translates new upstream UI terms and numbered phrases", () => {
   assert.equal(engine.translateText("12 columns  (auto)"), "12 欄（自動）");
   assert.equal(engine.translateText("23 minutes ago"), "23 分鐘前");
   assert.equal(engine.translateText("Can edit 12 files"), "可編輯 12 個檔案");
+  assert.equal(engine.translateText("Add skill"), "新增技能");
+  assert.equal(engine.translateText("Shared chat"), "共用聊天");
+  assert.equal(engine.translateText("Upload local fonts"), "上傳本機字型");
+  assert.equal(engine.translateText("Connectors"), "連接器");
 });
 
 test("matches synchronized multi-value translations", () => {
@@ -120,4 +124,31 @@ test("matches synchronized multi-value translations", () => {
   assert.equal(engine.translateText("Step 2 of 5"), "第 2 步，共 5 步");
   assert.equal(engine.translateText("Comment (8 unread)"), "評論（8 則未讀）");
   assert.equal(engine.translateText("No untranslated phrase"), null);
+});
+
+test("uses consistent Taiwan terminology for UI labels and status messages", () => {
+  const engine = createTranslationEngine(translations);
+
+  assert.equal(engine.translateText("Bent connector"), "彎曲連接線");
+  assert.equal(engine.translateText("Curved connector"), "曲線連接線");
+  assert.equal(
+    engine.translateText("Straight connector or line"),
+    "直線連接線或線條"
+  );
+  assert.equal(engine.translateText("Component details"), "元件詳細資訊");
+  assert.equal(engine.translateText("Documentation"), "說明文件");
+  assert.equal(engine.translateText("Documentation link"), "說明文件連結");
+  assert.equal(engine.translateText("Multiple documents"), "多份文件");
+  assert.equal(
+    engine.translateText(
+      "The current document has unsaved changes. Figma will continue trying to save in the background. Please try again later."
+    ),
+    "目前文件有未儲存的變更。Figma 將繼續在背景嘗試儲存。請稍後再試。"
+  );
+  assert.equal(
+    engine.translateText(
+      "By providing your phone number, you agree to receive text messages from Figma to enable two-factor authentication when you log in. Message and data rates may apply."
+    ),
+    "提供電話號碼即表示您同意在登入時接收 Figma 傳送的簡訊，以啟用兩步驗證。電信業者可能收取簡訊及數據傳輸費用。"
+  );
 });
