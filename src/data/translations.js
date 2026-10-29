@@ -1,5 +1,5 @@
-// Synced with Figma-Cool/figmaCN at commit b75a61e50207bb3c15a652ea7e7110b65a16b775.
-// Uses Taiwan terminology and dynamic patterns for repeated numbered entries.
+// Synced with Figma-Cool/figmaCN at commit 88a7d3878f8deb2a4b1c482dfcbb7a93a845e588.
+// Uses Taiwan terminology and retains legacy dynamic entries for compatibility.
 const translations = [
   [` arrow`, `箭頭`],
   [` autosave `, ` 個自動儲存 `],
@@ -5433,6 +5433,30 @@ const translations = [
   ["Upload local fonts", "上傳本機字型"],
   ["Use your fonts with Figma agents", "讓 Figma AI Agent 使用您的字型"],
   ["You can currently see teammates’ view history in your files, and they can see yours. Learn more", "您目前可以在檔案中查看隊友的檢視歷史記錄，他們也可以查看您的記錄。瞭解更多"],
+  ["{@} comments", "{1} 則評論"],
+  ["All plans", "所有方案"],
+  ["Ask anything", "詢問任何問題"],
+  ["Bullet list", "項目符號清單"],
+  ["Current account", "目前帳戶"],
+  ["Current location: ", "目前位置："],
+  ["Divider", "分隔線"],
+  ["Export as Markdown", "匯出為 Markdown"],
+  ["Install manually", "手動安裝"],
+  ["Integrate Figma MCP with third-party agents", "將 Figma MCP 與第三方 AI Agent 整合"],
+  ["Leave {@}?", "確定要離開「{1}」嗎？"],
+  ["New plan", "新方案"],
+  ["Only yours", "僅限您"],
+  ["Other AI tools", "其他 AI 工具"],
+  ["Quote", "引用"],
+  ["Set up MCP", "設定 MCP"],
+  ["Switch plan", "切換方案"],
+  ["This team won't be a part of your existing plans.", "此團隊不會加入您現有的方案。"],
+  ["To move this file, you need to be granted edit access to {@}.", "若要移動此檔案，您需要取得「{1}」的編輯權限。"],
+  ["To-do", "待辦事項"],
+  ["Updated ", "更新於 "],
+  ["view", "檢視"],
+  ["You can", "您可以"],
+  ["You will permanently lose all access to drafts, folders, files, and apps in this team. This action cannot be undone.", "您將永久失去此團隊中所有草稿、資料夾、檔案和應用程式的存取權限。此操作無法復原。"],
   [" of {@} Figma design files used", " / {1} 個 Figma 設計檔案"],
   [" of {@} project used", " / {1} 個專案"],
   ["Add emoji", "新增表情符號"],

@@ -2,6 +2,17 @@
 
 This changelog follows the [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/) format to track version updates.
 
+## [1.1.3] - 2026-10-29
+
+### Added
+
+- 新增 24 個詞條，涵蓋 Figma MCP、第三方 AI Agent、Markdown 匯出、文字格式、方案切換及團隊存取權限。
+- 新增 `{@} comments`、`Leave {@}?` 與檔案移動權限等動態翻譯模式。
+
+### Changed
+
+- 保留上游已移除的 14 個 `Edited … ago` 動態詞條，維持舊版 Figma UI 的翻譯相容性。
+
 ## [1.1.2] - 2026-10-21
 
 ### Added
