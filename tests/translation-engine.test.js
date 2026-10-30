@@ -9,8 +9,8 @@ const {
 test("loads the synchronized exact and pattern entries", () => {
   const engine = createTranslationEngine(translations);
 
-  assert.equal(engine.exactEntryCount, 4263);
-  assert.equal(engine.patternEntryCount, 102);
+  assert.equal(engine.exactEntryCount, 4284);
+  assert.equal(engine.patternEntryCount, 105);
 });
 
 test("prefers an exact translation over a matching pattern", () => {
@@ -150,5 +150,57 @@ test("uses consistent Taiwan terminology for UI labels and status messages", () 
       "By providing your phone number, you agree to receive text messages from Figma to enable two-factor authentication when you log in. Message and data rates may apply."
     ),
     "提供電話號碼即表示您同意在登入時接收 Figma 傳送的簡訊，以啟用兩步驗證。電信業者可能收取簡訊及數據傳輸費用。"
+  );
+});
+
+test("translates the October 2026 upstream entries", () => {
+  const engine = createTranslationEngine(translations);
+  const exactTranslations = [
+    ["All plans", "所有方案"],
+    ["Ask anything", "詢問任何問題"],
+    ["Bullet list", "項目符號清單"],
+    ["Current account", "目前帳戶"],
+    ["Current location: ", "目前位置："],
+    ["Divider", "分隔線"],
+    ["Export as Markdown", "匯出為 Markdown"],
+    ["Install manually", "手動安裝"],
+    [
+      "Integrate Figma MCP with third-party agents",
+      "將 Figma MCP 與第三方 AI Agent 整合",
+    ],
+    ["New plan", "新方案"],
+    ["Only yours", "僅限您"],
+    ["Other AI tools", "其他 AI 工具"],
+    ["Quote", "引用"],
+    ["Set up MCP", "設定 MCP"],
+    ["Switch plan", "切換方案"],
+    [
+      "This team won't be a part of your existing plans.",
+      "此團隊不會加入您現有的方案。",
+    ],
+    ["To-do", "待辦事項"],
+    ["Updated ", "更新於 "],
+    ["view", "檢視"],
+    ["You can", "您可以"],
+    [
+      "You will permanently lose all access to drafts, folders, files, and apps in this team. This action cannot be undone.",
+      "您將永久失去此團隊中所有草稿、資料夾、檔案和應用程式的存取權限。此操作無法復原。",
+    ],
+  ];
+
+  exactTranslations.forEach(([sourceText, translatedText]) => {
+    assert.equal(engine.translateText(sourceText), translatedText);
+  });
+
+  assert.equal(engine.translateText("8 comments"), "8 則評論");
+  assert.equal(
+    engine.translateText("Leave Design team?"),
+    "確定要離開「Design team」嗎？"
+  );
+  assert.equal(
+    engine.translateText(
+      "To move this file, you need to be granted edit access to Product."
+    ),
+    "若要移動此檔案，您需要取得「產品」的編輯權限。"
   );
 });
